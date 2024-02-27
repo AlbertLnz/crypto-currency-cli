@@ -1,13 +1,12 @@
 import { program } from 'commander'
+import { key } from '../commands/key.js'
 
 // coindex key -h
 
 program
   .command('set')
   .description('Set API key - Get at https://coinmarketcap.com/api/')
-  .action(() => {
-    console.log('Hello from set command')
-  })
+  .action(key.set)
 
   // -> commands:
   //     - coindex key set
@@ -15,9 +14,7 @@ program
 program
   .command('show')
   .description('Show an API Key')
-  .action(() => {
-    console.log('Hello from set command')
-  })
+  .action(key.show)
 
   // -> commands:
   //     - coindex key show
@@ -25,9 +22,7 @@ program
 program
   .command('remove')
   .description('Remove an API Key')
-  .action(() => {
-    console.log('Hello from set command')
-  })
+  .action(key.remove)
 
   // -> commands:
   //     - coindex key remove
