@@ -1,0 +1,23 @@
+{
+  "name": "crypto-currency-cli",
+  "version": "1.0.0",
+  "description": "Crypto currency cli",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlbertLnz/crypto-currency-cli.git"
+  },
+  "keywords": [
+    "CLI",
+    "NodeJS"
+  ],
+  "author": "AlbertLnz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlbertLnz/crypto-currency-cli/issues"
+  },
+  "homepage": "https://github.com/AlbertLnz/crypto-currency-cli#readme"
+}
