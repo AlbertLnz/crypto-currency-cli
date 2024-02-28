@@ -1,13 +1,14 @@
 import { KeyManager } from "../lib/KeyManager.js"
 import inquirer from "inquirer"
 import colors from 'colors'
+import { isRequired } from "../utils/validation.js"
 
 export const key = {
 
   async set() {
     const keyManager = new KeyManager()
     const input = await inquirer.prompt([
-      { type: 'input', name: 'key', message: colors.cyan('Enter an CoinMarket API Key: ') }
+      { type: 'input', name: 'key', message: colors.cyan('Enter an CoinMarket API Key: '), validate: isRequired }
     ])
     const keySet = keyManager.setKey(input.key)
 
