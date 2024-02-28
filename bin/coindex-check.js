@@ -6,7 +6,11 @@ import { check } from '../commands/check.js'
 program
   .command('price')
   .description('Check price of coins')
-  .action(check.price)
+  .option('--coin <type>', 'Add specific coin types in CSV format', 'BTC,ETH,XRP') // (option <param>, description, default value)
+  .option('--cur <currency>', 'Change the currency', 'USD')
+  .action((cmd) => {
+    check.price(cmd)
+  })
 
 
 program.parse(process.argv)

@@ -1,5 +1,5 @@
 export const check = {
-  price() {
-    console.log('Hello from check.price() from check.js')
+  price(cmd) {
+    console.log(cmd.coin, '+', cmd.cur)
   }
 }
