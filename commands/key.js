@@ -30,7 +30,14 @@ export const key = {
   },
 
   remove() {
-    console.log('Hello from remove()')
+    try {
+      const keyManager = new KeyManager()
+      keyManager.deleteKey()
+      console.log('The CoinMarket API Key has been removed!'.bold.magenta)
+
+    } catch (error) {
+      console.log(error.message.bold.red)
+    }
   },
 
 }
